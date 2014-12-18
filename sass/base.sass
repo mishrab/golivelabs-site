@@ -1,0 +1,159 @@
+@import globals
+@import reset
+
+body
+  font: $global-font
+  min-width: 60em
+
+.top-bar
+  background-color: $purple-background
+  // color: white
+  font-weight: 300
+  font-size: 0.85em
+  letter-spacing: 0.08em
+  text-transform: capitalize
+  position: relative
+  text-align: center
+  overflow: hidden
+  color: $purple-font-1
+
+  .top-bar-links
+    // display: flex
+    // justify-content: center
+    text-align: center
+    li
+      display: inline-block
+      line-height: 5em
+      a
+        display: inline-block
+        line-height: 5em
+        padding: 0 1em 0 1em
+        color: $purple-font-1
+        text-decoration: none
+        position: relative
+      a:hover
+        color: #ffffff
+        cursor: pointer
+        @include transition-basic(color)
+        text-shadow: 0 0 1em white
+        // border-bottom: 0.15em solid #ffffff
+      a:hover:after
+        position: absolute
+        left: calc(50% - 0.5em)
+        bottom: 1em
+        content: ''
+        width: 0
+        height: 0
+        border-left: 0.5em solid transparent
+        border-right: 0.5em solid transparent
+        border-top-width: 0.5em
+        border-top-color: #ffffff
+        border-top-style: solid
+        @include transition-basic(border-top-color)
+  .title-area
+    display: none // todo: change this to display
+    position: absolute
+    left: 2em
+    top: -2.5em
+    width: 10em
+    overflow: hidden
+    li
+      font-size: 1.25em
+      line-height: 8em
+      text-transform: none
+      min-height: 8em
+      // background-color: $purple-background-2
+      border-radius: 50%
+      background-color: #ffffff
+      div
+        width: 7em
+        margin: 0 auto
+        font-family: "Consolas", "Menlo", "Courier", monospace
+        // background-image: url('../img/gll_logo_med.jpg')
+        background-size: contain
+        background-position: center center
+        background-repeat: no-repeat
+        color: $purple-background
+
+
+
+.data-div
+  width: 60%
+  // box-shadow: 0 0 1em 0.15em $purple-background
+  border: 1px solid #eee
+  margin: 3em auto
+  min-height: 10em
+  padding: 1em
+  border-radius: 0.15em
+  a.mail
+    display: inline-block
+    line-height: 2em
+    padding-left: 0.5em
+
+.data-div:nth-child(2n)
+  background-color: #efefef
+
+div.gll-address
+  color: $purple-font-2
+  padding: 0 0.75em 0em
+  // border: 1px solid #eed9ff
+  display: inline-block
+
+.attention-1
+  line-height: 4em
+  font-size: 300%
+  text-align: center
+  .fa
+    font-size: 90%
+    margin-right: 0.5em
+
+
+
+span.tag
+  display: inline-block
+  color: white
+  line-height: 1.5em
+  font-size: 0.85em
+  background-color: #76b582
+  padding: 0.25em 0.75em
+  border-radius: 0.15em
+  float: right
+  text-shadow: -1px -1px 1px #619766
+
+
+p.corporate-email
+  a
+    font-size: 1.5em
+    color: $purple-background
+    text-decoration: none
+
+
+// code for the top nav-bar
+nav.top
+  background-color: $purple-background-2
+  line-height: 1.5em
+  color: red
+  overflow: auto
+  padding: 0 1.2em 0 2em
+  a
+    display: inline-block
+    float: right
+    line-height: 2em
+    min-width: 2em
+    text-align: center
+    color: lighten($purple-background-2, 35%)
+    border-right: 1px solid lighten($purple-background-2, 10%)
+  a.top-home
+    border: none
+    float: left
+    font-size: 0.85em
+    line-height: 2.4em
+    text-decoration: none
+  a:last-child
+    border-left: 1px solid lighten($purple-background-2, 10%)
+  a:hover
+    color: #ffffff
+    text-shadow: 0 0 20px white
+    @include transition-basic(color)
+
+

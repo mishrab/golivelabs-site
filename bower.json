@@ -1,0 +1,20 @@
+{
+  "name": "GoLiveLabs_Site",
+  "version": "0.0.0",
+  "authors": [
+    "pvtech <tech@golivelabs.io>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lato": "~0.2.2",
+    "reset-css": "~2.0.20110126",
+    "font-awesome": "~4.2.0"
+  }
+}

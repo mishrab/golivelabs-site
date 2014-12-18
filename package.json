@@ -1,0 +1,16 @@
+{
+  "name": "GoLiveLabs_Site",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.3.0",
+    "grunt-contrib-watch": "~0.4.4"
+  },
+  "author": "",
+  "license": "ISC"
+}

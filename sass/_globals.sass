@@ -1,0 +1,25 @@
+$global-font: 300 1em 'Lato','Hevetica Neue', 'Segoe UI', 'Droid Sans', 'Helvetica'
+$purple-background: #301d4d
+$purple-background-2: #5b3e7c
+$purple-background-3: #884ccf
+$purple-light: #ede3ff
+$purple-font-2: #807d93
+$purple-background-2-trans: rgba(126, 70, 192, 0.75)
+$purple-font-1: #e7d0ff
+
+.right
+  float: right
+
+
+@mixin transition($transition-property, $transition-time, $method) 
+  -webkit-transition: $transition-property $transition-time $method
+  -moz-transition: $transition-property $transition-time $method
+  -ms-transition: $transition-property $transition-time $method
+  -o-transition: $transition-property $transition-time $method
+  transition: $transition-property $transition-time $method
+
+@mixin transition-basic($property)
+  @include transition($property, 500ms, ease)
+
+
+
