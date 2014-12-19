@@ -5,6 +5,7 @@ body
   font: $global-font
   min-width: 60em
 
+
 .top-bar
   background-color: $purple-background
   // color: white
@@ -49,7 +50,6 @@ body
         border-top-width: 0.5em
         border-top-color: #ffffff
         border-top-style: solid
-        @include transition-basic(border-top-color)
   .title-area
     display: none // todo: change this to display
     position: absolute
@@ -178,6 +178,15 @@ div.gll-address
   padding: 0 0.75em 0em
   // border: 1px solid #eed9ff
   display: inline-block
+a.gll-address
+  color: $purple-font-2
+  padding: 0 0.75em 0em
+  text-align: center
+  display: inline-block
+a.gll-address > span
+  display: inline-block
+  width: 100%
+  text-align: center
 
 .attention-1
   line-height: 4em
@@ -257,3 +266,83 @@ nav.top
     @include transition-basic(color)
 
 
+// code for full width sections
+section.full-width
+  width: 100%
+  margin: 2em auto
+  padding: 2em 0
+  position: relative
+  #map-canvas
+    width: 100%
+    min-height: 30em
+    margin: 0 auto
+    z-index: 10
+  h1
+    font-size: 2em
+    font-weight: 300
+    color: white// $purple-font-1
+    text-align: center
+    background-color: $purple-background-3
+    line-height: 3em
+    margin-top: -1em
+  h1:after
+    z-index: 11
+    position: absolute
+    left: calc(50% - 1em)
+    top: 3em
+    content: ''
+    width: 0
+    height: 0
+    border-left: 1em solid transparent
+    border-right: 1em solid transparent
+    border-top-width: 1em
+    border-top-color: $purple-background-3
+    border-top-style: solid
+
+
+
+section.full-width
+  width: 100%
+  margin: 0 auto
+  padding: 2em 0
+  // box-shadow: 0 0 1px 1px #eee
+
+
+
+section.full-width:nth-child(2n)
+  background-color: #eee
+
+
+
+.bottom-bar
+  background-color: $purple-background
+  // color: white
+  font-weight: 300
+  font-size: 0.85em
+  letter-spacing: 0.08em
+  text-transform: capitalize
+  position: relative
+  text-align: center
+  overflow: hidden
+  color: $purple-font-1
+
+  .top-bar-links
+    // display: flex
+    // justify-content: center
+    text-align: center
+    li
+      display: inline-block
+      line-height: 5em
+      a
+        display: inline-block
+        line-height: 5em
+        padding: 0 1em 0 1em
+        color: $purple-font-1
+        text-decoration: none
+        position: relative
+      a:hover
+        color: #ffffff
+        cursor: pointer
+        @include transition-basic(color)
+        text-shadow: 0 0 1em white
+// border-bottom: 0.15em solid #ffffff
